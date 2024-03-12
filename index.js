@@ -1,0 +1,10 @@
+const express = require('express')
+const apploader = require('./src/loader/app/index.js')
+const dbloader = require('./src/loader/db/index.js')
+require('dotenv').config()
+const router = require('./src/router/index.js')
+const app = express()
+
+dbloader()
+    .then(()=>apploader(app, router))
+    .catch((error)=>{throw new Error(error)})
