@@ -3,7 +3,8 @@ const { createServer } = require('http');
 const path = require('path');
 const cors = require('cors');
 const morgan = require('morgan');
-require('dotenv').config()
+require('dotenv').config();
+
 
 const port = process.env.PORT || 3000;
 
