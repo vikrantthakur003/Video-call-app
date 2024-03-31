@@ -8,7 +8,7 @@
         const password = document.getElementById('password').value;
 
         try {
-            const response = await fetch('http://localhost:4000/api/login', {
+            const response = await fetch('https://illuminati-be.vercel.app/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -27,7 +27,7 @@
             localStorage.setItem('accessToken', accessToken);
 
             // Perform redirection to lobby.html
-            window.location.href = 'http://localhost:4000/public/lobby.html';
+            window.location.href = 'https://illuminati-be.vercel.app/public/lobby.html';
         } catch (error) {
             console.error('Authentication error:', error.message);
             // Handle authentication error (e.g., display error message)
@@ -44,7 +44,7 @@
     };
 
     // Example: Fetching data from a protected endpoint
-    fetch('http://localhost:4000/public/lobby.html', {
+    fetch('https://illuminati-be.vercel.app/public/lobby.html', {
         method: 'GET',
         headers: headers
     })

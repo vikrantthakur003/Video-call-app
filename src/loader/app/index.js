@@ -16,7 +16,7 @@ const apploader = async(app, router) =>{
         }));
         app.use(express.json());
         app.use(express.urlencoded({ extended: true }));
-        app.use('/public',express.static(path.join(__dirname,'../../../../client')))
+        app.use('/public',express.static(path.join(__dirname,'../../../client')))
         app.use(morgan('dev'));
         app.use('/api',router);
         app.use( async(req,res)=>{
