@@ -10,6 +10,13 @@
 </head>
 <body>
 
+    <!-- Loader -->
+    <div id="loader" class="loader"></div>
+
+    <div id="toast" class="toast hidden">
+        <div class="toast-message"></div>
+    </div>
+
     <header id="nav">
        <div class="nav--list">
             <a href= #>
@@ -44,12 +51,15 @@
  
                  <div class="form__field__wrapper">
                      <label>Your Email</label>
-                     <input id="username" type="text" name="name" required placeholder="Enter your Email..." />
+                     <input id="username" type="email" name="name" required placeholder="Enter your Email..." />
+                     <!-- <div id="emailError" class="error"></div> Error message placeholder -->
                  </div>
+
  
                  <div class="form__field__wrapper">
                      <label>Password</label>
-                     <input id="password" type="text" name="room"  placeholder="Enter your Password..." />
+                     <input id="password" type="text" name="room" required placeholder="Enter your Password..." />
+                     <div id="passwordError" class="error"></div> <!-- Error message placeholder -->
                  </div>
  
                  <div class="form__field__wrapper">
